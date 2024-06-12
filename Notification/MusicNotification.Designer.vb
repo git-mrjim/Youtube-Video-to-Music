@@ -24,6 +24,7 @@ Partial Class MusicNotification
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim Timer As System.Windows.Forms.Timer
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MusicNotification))
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.pb_thumbnail = New Guna.UI2.WinForms.Guna2PictureBox()
         Me.MusicPanel = New Guna.UI2.WinForms.Guna2Panel()
@@ -100,6 +101,7 @@ Partial Class MusicNotification
         Me.Controls.Add(Me.MusicPanel)
         Me.Controls.Add(Me.pb_thumbnail)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "MusicNotification"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Music"

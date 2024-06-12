@@ -32,12 +32,12 @@
     ' url provided into music and download to the path provided
     Private Sub btn_download_Click(sender As Object, e As EventArgs) Handles btn_download.Click
 
-        Dim path As String = "C:\Users\ibayj\Downloads"
-        Dim downloadResult As Dictionary(Of String, Object) = Converter.Convert(tb_url.Text, path)
-
         SucessNotification.lb_title.Text = "Downloading..."
         SucessNotification.lb_description.Text = "Wait to be download complete one download at a time"
         SucessNotification.Show()
+
+        Dim path As String = "C:\Users\ibayj\Downloads"
+        Dim downloadResult As Dictionary(Of String, Object) = Converter.Convert(tb_url.Text, path)
 
         If downloadResult IsNot Nothing AndAlso downloadResult("failed") = False Then
 

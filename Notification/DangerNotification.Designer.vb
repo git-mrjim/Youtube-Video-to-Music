@@ -23,6 +23,7 @@ Partial Class DangerNotification
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DangerNotification))
         Me.Guna2BorderlessForm1 = New Guna.UI2.WinForms.Guna2BorderlessForm(Me.components)
         Me.lb_description = New System.Windows.Forms.Label()
         Me.lb_title = New System.Windows.Forms.Label()
@@ -100,6 +101,7 @@ Partial Class DangerNotification
         Me.Controls.Add(Me.Guna2ControlBox1)
         Me.Controls.Add(Me.Guna2Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "DangerNotification"
         Me.Text = "Danger"
         Me.ResumeLayout(False)

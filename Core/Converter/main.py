@@ -20,7 +20,7 @@ def Download(url, path):
             'videoUrl': url,
             'path': new,
             'failed': False,
-            'message': 'You can now play the music'
+            'message': 'You can now play the music ' + yt.title
         }
     except Exception as e:
         return {

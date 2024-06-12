@@ -24,6 +24,7 @@ Partial Class LoginForm
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim Guna2BorderlessForm1 As Guna.UI2.WinForms.Guna2BorderlessForm
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.LoginPanel = New Guna.UI2.WinForms.Guna2ShadowPanel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -251,6 +252,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.Guna2ControlBox1)
         Me.Controls.Add(Me.LoginPanel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "LoginForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Login Form"
